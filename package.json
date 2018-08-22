@@ -1,0 +1,33 @@
+{
+  "name": "map-glyph-server",
+  "version": "0.0.0",
+  "description": "Server for glyph/font files compatible with mapbox-gl-js",
+  "author": {
+    "name": "Damian Krzeminski",
+    "email": "pirxpilot@furkot.com",
+    "url": "https://furkot.com"
+  },
+  "repository": "furkot/map-glyph-server",
+  "license": "MIT",
+  "keywords": [
+    "map-glyph-server",
+    "map",
+    "mapbox",
+    "font",
+    "vector tiles"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "jshint": "~2",
+    "mocha": "~5",
+    "should": "~13"
+  },
+  "scripts": {
+    "test": "make check"
+  },
+  "files": [
+    "index.js",
+    "lib"
+  ]
+}
