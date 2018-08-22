@@ -17,11 +17,17 @@
     "vector tiles"
   ],
   "dependencies": {
+    "async": "^2.6.1",
+    "debug": "~3",
+    "express": "^4.16.3",
+    "findit": "^2.0.0",
+    "glyph-pbf-composite": "^0.0.2"
   },
   "devDependencies": {
     "jshint": "~2",
     "mocha": "~5",
-    "should": "~13"
+    "should": "~13",
+    "supertest": "^3.1.0"
   },
   "scripts": {
     "test": "make check"
