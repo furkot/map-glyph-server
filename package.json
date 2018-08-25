@@ -19,6 +19,7 @@
   "dependencies": {
     "async": "^2.6.1",
     "debug": "~3",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "findit": "^2.0.0",
     "glyph-pbf-composite": "^0.0.2"
