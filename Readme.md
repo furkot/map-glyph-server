@@ -10,16 +10,21 @@ Server for glyph/font files compatible with mapbox-gl-js
 ## Install
 
 ```sh
-$ npm install --save map-glyph-server
+$ npm install --global map-glyph-server
 ```
 
 ## Usage
 
-```js
-var mapGlyphServer = require('map-glyph-server');
+Prior to starting the server glyphs should be located in `MAP_GLYPH_SERVER_PORT` directory. This can
+be achieved using [openmaptiles/fonts] or a similar utility.
 
-mapGlyphServer('Rainbow');
-```
+`MAP_GLYPH_SERVER_PORT` is the port number map-glyph-server will use
+
+`/etc/default/map-glyph-server` can be used to set environment variables
+
+In order to use the fonts edit Style JSON and change the endpoint for glyphs:
+
+    "glyphs": "https://fonts.example.com/{fontstack}/{range}.pbf",
 
 ## License
 
@@ -36,3 +41,5 @@ MIT © [Damian Krzeminski](https://furkot.com)
 
 [deps-dev-image]: https://img.shields.io/david/dev/furkot/map-glyph-server.svg
 [deps-dev-url]: https://david-dm.org/furkot/map-glyph-server?type=dev
+
+[openmaptiles/fonts]: https://github.com/openmaptiles/fonts
