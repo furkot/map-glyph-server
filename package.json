@@ -18,11 +18,12 @@
   ],
   "dependencies": {
     "async": "~2",
+    "connect": "~3",
     "debug": "~4",
     "dotenv": "~7",
-    "express": "^4.16.3",
     "findit": "^2.0.0",
-    "glyph-pbf-composite": "^0.0.2"
+    "glyph-pbf-composite": "^0.0.2",
+    "router": "~1"
   },
   "devDependencies": {
     "jshint": "~2",

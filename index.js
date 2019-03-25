@@ -1,6 +1,6 @@
 require('dotenv').config({ path: '/etc/default/map-glyph-server' });
 
-const express = require('express');
+const connect = require('connect');
 const router = require('./lib/map-glyph-server');
 
 const PORT = process.env.MAP_GLYPH_SERVER_PORT || 3060;
@@ -11,7 +11,7 @@ if (!FONT_PATH) {
   process.exit(1);
 }
 
-const app = express();
+const app = connect();
 
 app.use(router(FONT_PATH));
 
