@@ -17,18 +17,20 @@
     "vector tiles"
   ],
   "dependencies": {
-    "async": "^2.6.1",
-    "debug": "~3",
-    "dotenv": "^6.0.0",
-    "express": "^4.16.3",
+    "@mapbox/glyph-pbf-composite": "^0.0.3",
+    "async": "~2",
+    "connect": "~3",
+    "debug": "~4",
+    "dotenv": "~7",
     "findit": "^2.0.0",
-    "glyph-pbf-composite": "^0.0.2"
+    "router": "~1"
   },
   "devDependencies": {
     "jshint": "~2",
-    "mocha": "~5",
-    "should": "~13",
-    "supertest": "^3.1.0"
+    "supertest": "~4",
+    "tap-dot": "^2.0.0",
+    "tape": "~4",
+    "tape-promise": "~4"
   },
   "scripts": {
     "test": "make check"
