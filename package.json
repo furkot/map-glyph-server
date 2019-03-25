@@ -17,12 +17,12 @@
     "vector tiles"
   ],
   "dependencies": {
+    "@mapbox/glyph-pbf-composite": "^0.0.3",
     "async": "~2",
     "connect": "~3",
     "debug": "~4",
     "dotenv": "~7",
     "findit": "^2.0.0",
-    "glyph-pbf-composite": "^0.0.2",
     "router": "~1"
   },
   "devDependencies": {
