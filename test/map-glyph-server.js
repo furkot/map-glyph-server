@@ -1,4 +1,5 @@
 process.env.MAP_GLYPH_SERVER_FONT_PATH = __dirname + '/fixtures';
+process.env.MAP_GLYPH_SERVER_CACHE_MAX_AGE = 2592000;
 
 const request = require('supertest');
 const app = require('..');
@@ -33,11 +34,13 @@ test('return a specific font', function () {
     .expect(200);
 });
 
-test('return a fallback font', function () {
+
+test('return a specific font', function () {
   return request(app)
-    .get('/fonts/Open%20Sans%20Bold/256-511.pbf')
+    .get('/fonts/Metropolis%20Black/0-255.pbf')
     .expect('Content-Type', 'application/x-protobuf')
-    .expect('Content-Length', '45992')
+    .expect('Content-Length', '75651')
+    .expect('Cache-Control', 'public, max-age=2592000')
     .expect(200);
 });
 
