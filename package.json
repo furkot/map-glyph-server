@@ -21,7 +21,7 @@
     "async": "~2",
     "connect": "~3",
     "debug": "~4",
-    "dotenv": "~7",
+    "dotenv": "~8",
     "findit": "^2.0.0",
     "router": "~1"
   },
