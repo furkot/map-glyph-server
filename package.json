@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "@mapbox/glyph-pbf-composite": "^0.0.3",
-    "async": "~2",
+    "async": "~3",
     "connect": "~3",
     "debug": "~4",
     "dotenv": "~8",
