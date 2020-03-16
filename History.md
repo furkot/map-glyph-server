@@ -1,4 +1,11 @@
 
+1.1.2 / 2020-03-16
+==================
+
+ * upgrade async to ~3
+ * upgrade dotenv to ~8
+ * update dependencies
+
 1.1.1 / 2020-03-16
 ==================
 
