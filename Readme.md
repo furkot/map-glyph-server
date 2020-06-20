@@ -24,7 +24,7 @@ be achieved using [openmaptiles/fonts] or a similar utility.
 
 In order to use the fonts edit Style JSON and change the endpoint for glyphs:
 
-    "glyphs": "https://fonts.example.com/{fontstack}/{range}.pbf",
+    "glyphs": "https://fonts.example.com/fonts/{fontstack}/{range}.pbf",
 
 ## License
 
