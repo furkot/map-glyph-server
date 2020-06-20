@@ -29,7 +29,7 @@
     "jshint": "~2",
     "supertest": "~4",
     "tap-dot": "^2.0.0",
-    "tape": "~4",
+    "tape": "~5",
     "tape-promise": "~4"
   },
   "scripts": {
