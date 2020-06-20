@@ -15,7 +15,7 @@ $ npm install --global map-glyph-server
 
 ## Usage
 
-Prior to starting the server glyphs should be located in `MAP_GLYPH_SERVER_PORT` directory. This can
+Prior to starting the server glyphs should be located in `MAP_GLYPH_SERVER_FONT_PATH` directory. This can
 be achieved using [openmaptiles/fonts] or a similar utility.
 
 `MAP_GLYPH_SERVER_PORT` is the port number map-glyph-server will use
@@ -24,7 +24,7 @@ be achieved using [openmaptiles/fonts] or a similar utility.
 
 In order to use the fonts edit Style JSON and change the endpoint for glyphs:
 
-    "glyphs": "https://fonts.example.com/{fontstack}/{range}.pbf",
+    "glyphs": "https://fonts.example.com/fonts/{fontstack}/{range}.pbf",
 
 ## License
 
