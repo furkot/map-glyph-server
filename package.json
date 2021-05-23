@@ -1,6 +1,6 @@
 {
   "name": "map-glyph-server",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Server for glyph/font files compatible with mapbox-gl-js",
   "author": {
     "name": "Damian Krzeminski",

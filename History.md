@@ -1,4 +1,11 @@
 
+1.1.4 / 2021-05-23
+==================
+
+ * upgrade supertest
+ * updgrade dotenv
+ * update dependencies
+
 1.1.3 / 2020-06-20
 ==================
 
