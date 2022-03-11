@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 require('dotenv').config({ path: '/etc/default/map-glyph-server' });
 
 const connect = require('connect');
