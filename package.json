@@ -28,10 +28,7 @@
   },
   "devDependencies": {
     "jshint": "~2",
-    "supertest": "~6",
-    "tap-dot": "^2.0.0",
-    "tape": "~5",
-    "tape-promise": "~4"
+    "supertest": "~6"
   },
   "scripts": {
     "test": "make check"
