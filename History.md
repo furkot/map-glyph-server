@@ -1,4 +1,12 @@
 
+1.1.7 / 2023-10-14
+==================
+
+ * replace Travis CI with github actions
+ * soft dependency update
+ * replace jshint with @pirxpilot/jshint
+ * replace tape with native node test runner
+
 1.1.6 / 2022-03-11
 ==================
 
