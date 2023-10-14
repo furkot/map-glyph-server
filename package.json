@@ -7,7 +7,10 @@
     "email": "pirxpilot@furkot.com",
     "url": "https://furkot.com"
   },
-  "repository": "furkot/map-glyph-server",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/furkot/map-glyph-server.git"
+  },
   "license": "MIT",
   "keywords": [
     "map-glyph-server",
@@ -16,7 +19,9 @@
     "font",
     "vector tiles"
   ],
-  "bin": "./index.js",
+  "bin": {
+    "map-glyph-server": "index.js"
+  },
   "dependencies": {
     "@mapbox/glyph-pbf-composite": "^0.0.3",
     "async": "~3",
