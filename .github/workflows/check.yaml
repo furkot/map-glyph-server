@@ -1,0 +1,16 @@
+name: check
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ 'latest' ]
+    name: Check on node ${{ matrix.node }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version:  ${{ matrix.node }}
+      - run: yarn install
+      - run: make

@@ -1,7 +1,6 @@
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
+[![Build Status][build-image]][build-url]
 [![Dependency Status][deps-image]][deps-url]
-[![Dev Dependency Status][deps-dev-image]][deps-dev-url]
 
 # map-glyph-server
 
@@ -38,17 +37,15 @@ In order to use the fonts edit [Style JSON][glyphs-doc] and change the endpoint 
 
 MIT © [Damian Krzeminski](https://furkot.com)
 
-[npm-image]: https://img.shields.io/npm/v/map-glyph-server.svg
+[npm-image]: https://img.shields.io/npm/v/map-glyph-server
 [npm-url]: https://npmjs.org/package/map-glyph-server
 
-[travis-url]: https://travis-ci.org/furkot/map-glyph-server
-[travis-image]: https://img.shields.io/travis/furkot/map-glyph-server.svg
+[build-url]: https://github.com/furkot/map-glyph-server/actions/workflows/check.yaml
+[build-image]: https://img.shields.io/github/actions/workflow/status/furkot/map-glyph-server/check.yaml?branch=main
 
-[deps-image]: https://img.shields.io/david/furkot/map-glyph-server.svg
-[deps-url]: https://david-dm.org/furkot/map-glyph-server
+[deps-image]: https://img.shields.io/librariesio/release/npm/map-glyph-server
+[deps-url]: https://libraries.io/npm/map-glyph-server
 
-[deps-dev-image]: https://img.shields.io/david/dev/furkot/map-glyph-server.svg
-[deps-dev-url]: https://david-dm.org/furkot/map-glyph-server?type=dev
 
 [openmaptiles/fonts]: https://github.com/openmaptiles/fonts
 [cache-control]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control

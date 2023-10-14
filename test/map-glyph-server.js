@@ -1,10 +1,11 @@
 process.env.MAP_GLYPH_SERVER_FONT_PATH = __dirname + '/fixtures';
 process.env.MAP_GLYPH_SERVER_CACHE_MAX_AGE = 2592000;
 
+const test = require('node:test');
+const assert = require('node:assert/strict');
+
 const request = require('supertest');
 const app = require('..');
-const tape = require('tape');
-const test = require('tape-promise').default(tape);
 
 /*
 75651 fixtures/Metropolis Black/0-255.pbf
@@ -13,13 +14,13 @@ const test = require('tape-promise').default(tape);
 74696 fixtures/Open Sans Regular/0-255.pbf
 */
 
-test('return /fonts.json', function (t) {
+test('return /fonts.json', function () {
   return request(app)
     .get('/fonts.json')
     .set('Accept', 'application/json')
     .expect('Content-Type', /json/)
     .expect(200)
-    .then(response => t.same(response.body, [
+    .then(response => assert.deepEqual(response.body, [
           'Metropolis Black',
           'Open Sans Bold',
           'Open Sans Regular'
