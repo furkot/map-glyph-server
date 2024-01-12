@@ -1,4 +1,10 @@
 
+1.1.8 / 2024-01-12
+==================
+
+ * modernize find-fonts
+ * replace async module with native await/async
+
 1.1.7 / 2023-10-14
 ==================
 
