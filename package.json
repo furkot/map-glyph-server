@@ -23,12 +23,11 @@
     "map-glyph-server": "index.js"
   },
   "dependencies": {
+    "@folder/readdir": "^3.1.0",
     "@mapbox/glyph-pbf-composite": "^0.0.3",
-    "async": "~3",
     "connect": "~3",
     "debug": "~4",
     "dotenv": "~10",
-    "findit": "^2.0.0",
     "router": "~1"
   },
   "devDependencies": {

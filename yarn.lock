@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@folder/readdir@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@folder/readdir/-/readdir-3.1.0.tgz#f0c64b5d67669ba6f8374bb8d0dc376f36532b1e"
+  integrity sha512-mqkVdQ77BcCOWur/dxoPxjJS2eJg8Eqqx1Dgdc/qbTeGI5UMPDLmT0peGEjxLdlnD9SvhMnpJuiyaYl2btdT6A==
+
 "@mapbox/glyph-pbf-composite@^0.0.3":
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/@mapbox/glyph-pbf-composite/-/glyph-pbf-composite-0.0.3.tgz#18966c54737abcfca40408352728bed24a0b3e12"
@@ -28,11 +33,6 @@ asap@^2.0.0:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
   integrity sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==
-
-async@~3:
-  version "3.2.4"
-  resolved "https://registry.yarnpkg.com/async/-/async-3.2.4.tgz#2d22e00f8cddeb5fde5dd33522b56d1cf569a81c"
-  integrity sha512-iAB+JbDEGXhyIUavoDl9WP/Jj106Kz9DEn1DPgYw5ruDn0e3Wgi3sKFm55sASdGBNOQB8F59d9qQ7deqrHA8wQ==
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -150,11 +150,6 @@ finalhandler@1.1.2:
     parseurl "~1.3.3"
     statuses "~1.5.0"
     unpipe "~1.0.0"
-
-findit@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/findit/-/findit-2.0.0.tgz#6509f0126af4c178551cfa99394e032e13a4d56e"
-  integrity sha512-ENZS237/Hr8bjczn5eKuBohLgaD0JyUd0arxretR1f9RO46vZHA1b2y0VorgGV3WaOT3c+78P8h7v4JGJ1i/rg==
 
 form-data@^4.0.0:
   version "4.0.0"
