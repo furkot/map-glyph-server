@@ -36,7 +36,7 @@ test('return a specific font', function () {
 });
 
 
-test('return a specific font', function () {
+test('return a specific font again', function () {
   return request(app)
     .get('/fonts/Metropolis%20Black/0-255.pbf')
     .expect('Content-Type', 'application/x-protobuf')
