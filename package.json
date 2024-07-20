@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@folder/readdir": "^3.1.0",
-    "@mapbox/glyph-pbf-composite": "^0.0.3",
+    "@furkot/glyph-pbf-composite": "^1.0.1",
     "connect": "~3",
     "debug": "~4",
     "dotenv": "~10",

@@ -7,12 +7,12 @@
   resolved "https://registry.yarnpkg.com/@folder/readdir/-/readdir-3.1.0.tgz#f0c64b5d67669ba6f8374bb8d0dc376f36532b1e"
   integrity sha512-mqkVdQ77BcCOWur/dxoPxjJS2eJg8Eqqx1Dgdc/qbTeGI5UMPDLmT0peGEjxLdlnD9SvhMnpJuiyaYl2btdT6A==
 
-"@mapbox/glyph-pbf-composite@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@mapbox/glyph-pbf-composite/-/glyph-pbf-composite-0.0.3.tgz#18966c54737abcfca40408352728bed24a0b3e12"
-  integrity sha512-VcsYpDcFDuly8P4sbqBpFKpTrNsOqyvCkuAsoaQrQv9Y4cQnwrwdWgY3zBXJdS6OgukWfVaRwcUE6dwrDC0URA==
+"@furkot/glyph-pbf-composite@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@furkot/glyph-pbf-composite/-/glyph-pbf-composite-1.0.1.tgz#4a357e6011889679d63961f5685f730f4f29c473"
+  integrity sha512-aRCQXE9fSEVOF4KdDAtUEmpt1a/ezQPXRsWFnLMWwNrOloRn8YIVR30TT/5yQ3W1r+C6sBk5Q/R4B/Ns3BdYHg==
   dependencies:
-    protocol-buffers "^2.4.7"
+    protocol-buffers "~5"
 
 "@pirxpilot/jshint@^3.0.1":
   version "3.0.1"
@@ -38,6 +38,11 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==
+
+b4a@^1.6.0:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/b4a/-/b4a-1.6.6.tgz#a4cc349a3851987c3c4ac2d7785c18744f6da9ba"
+  integrity sha512-5Tk1HLk6b6ctmjIkAcU/Ujv/1WqiDl0F0JdRCR80VsOcUlHcu7pWeWRlOqQLHfDEsVx9YH/aif5AG4ehoCtTmg==
 
 balanced-match@^1.0.0:
   version "1.0.2"
@@ -182,7 +187,7 @@ generate-function@^2.0.0:
   dependencies:
     is-property "^1.0.2"
 
-generate-object-property@^1.1.0:
+generate-object-property@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/generate-object-property/-/generate-object-property-1.2.0.tgz#9c0e1c40308ce804f4783618b937fa88f99d50d0"
   integrity sha512-TuOwZWgJ2VAMEGJvAyPWvpqxSANF0LDpmyHauMjFYzaACvn+QTT/AZomvPCzVBV7yDN3OmwHQ5OvHaeLKre3JQ==
@@ -309,22 +314,31 @@ path-to-regexp@0.1.7:
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
   integrity sha512-5DFkuoqlv1uYQKxy8omFBeJPQcdoE07Kv2sferDCrAq1ohOU+MSDswDIbnx3YAM60qIOnYa53wBhXW0EbMonrQ==
 
-protobuf-schema@^1.2.0, protobuf-schema@^1.5.0:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/protobuf-schema/-/protobuf-schema-1.5.1.tgz#10912ead14fdd90599ed1bb8c6ed9681fbbaed1d"
-  integrity sha512-jPi6WrJQeqr717Fd42bY9L+rKb6VwGA3ZMAe9X3hwaIrCqW+bM+K+wu+DlVnP5MY2QoS6mqNIiOf9elymWdT6A==
+protocol-buffers-encodings@^1.1.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/protocol-buffers-encodings/-/protocol-buffers-encodings-1.2.0.tgz#39900b85dcff3172a23f15bdf3fda70daa2b38d3"
+  integrity sha512-daeNPuKh1NlLD1uDfbLpD+xyUTc07nEtfHwmBZmt/vH0B7VOM+JOCOpDcx9ZRpqHjAiIkGqyTDi+wfGSl17R9w==
+  dependencies:
+    b4a "^1.6.0"
+    signed-varint "^2.0.1"
+    varint "5.0.0"
 
-protocol-buffers@^2.4.7:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/protocol-buffers/-/protocol-buffers-2.7.0.tgz#fb9d6aa4c31bdb5cbf702ebf4bd41ccdad7f7824"
-  integrity sha512-uaQMT6i8KHUFA/vrSGb97tGXzgoWYxnf/Ledpx7x6vQPjbxRp4muN8DRz0PMi/IuNjB8Uq79h3Y24MFS+jYz3Q==
+protocol-buffers-schema@^3.1.1:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/protocol-buffers-schema/-/protocol-buffers-schema-3.6.0.tgz#77bc75a48b2ff142c1ad5b5b90c94cd0fa2efd03"
+  integrity sha512-TdDRD+/QNdrCGCE7v8340QyuXd4kIWIgapsE2+n/SaGiSSbomYl4TjHlvIoCWRpE7wFt02EpB35VVA2ImcBVqw==
+
+protocol-buffers@~5:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/protocol-buffers/-/protocol-buffers-5.0.0.tgz#00b8b1b2ef01d24377f2402c3f2f2c8335bc5fab"
+  integrity sha512-ceZAqqc5tKmsy4VXjQpCUbw9CJWHY+wIJitciBB9wyFXmcma8124Ck6LYwKncZgUzTkyCa+IyDrphI8s8DIWbA==
   dependencies:
     generate-function "^2.0.0"
-    generate-object-property "^1.1.0"
-    protobuf-schema "^1.5.0"
-    resolve-protobuf-schema "^1.0.2"
+    generate-object-property "^1.2.0"
+    protocol-buffers-encodings "^1.1.0"
+    protocol-buffers-schema "^3.1.1"
     signed-varint "^2.0.0"
-    varint "^4.0.0"
+    varint "^6.0.0"
 
 qs@^6.11.0:
   version "6.11.2"
@@ -332,13 +346,6 @@ qs@^6.11.0:
   integrity sha512-tDNIz22aBzCDxLtVH++VnTfzxlfeK5CbqohpSqpJgj1Wg/cQbStNAz3NuqCs5vV+pjBsK4x4pN9HlVh7rcYRiA==
   dependencies:
     side-channel "^1.0.4"
-
-resolve-protobuf-schema@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/resolve-protobuf-schema/-/resolve-protobuf-schema-1.0.2.tgz#91219afe30415d55dadbdf3813292bd2223c5990"
-  integrity sha512-x9optLjaRApo9b/CKahouGGpkUYbsBfEp3TpmwQCZUcu4t7c6hTXPWVwpDdy4Y4e5wKtg/G15rp1btIAQG2waA==
-  dependencies:
-    protobuf-schema "^1.2.0"
 
 router@~1:
   version "1.3.8"
@@ -374,7 +381,7 @@ side-channel@^1.0.4:
     get-intrinsic "^1.0.2"
     object-inspect "^1.9.0"
 
-signed-varint@^2.0.0:
+signed-varint@^2.0.0, signed-varint@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/signed-varint/-/signed-varint-2.0.1.tgz#50a9989da7c98c2c61dad119bc97470ef8528129"
   integrity sha512-abgDPg1106vuZZOvw7cFwdCABddfJRz5akcCcchzTbhyhYnsG31y4AlZEgp315T7W3nQq5P4xeOm186ZiPVFzw==
@@ -425,10 +432,15 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==
 
-varint@^4.0.0:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/varint/-/varint-4.0.1.tgz#490829b942d248463b2b35097995c3bf737198e9"
-  integrity sha512-vu4cpCqZHA4u77jWdOZlXtXHJofIIyq51DtzstbrvI9e1I1ELseAJLxYr47N/DdLPFGfYMLY1HqAURSTKKJ6ww==
+varint@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/varint/-/varint-5.0.0.tgz#d826b89f7490732fabc0c0ed693ed475dcb29ebf"
+  integrity sha512-gC13b/bWrqQoKY2EmROCZ+AR0jitc6DnDGaQ6Ls9QpKmuSgJB1eQ7H3KETtQm7qSdMWMKCmsshyCmUwMLh3OAA==
+
+varint@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/varint/-/varint-6.0.0.tgz#9881eb0ce8feaea6512439d19ddf84bf551661d0"
+  integrity sha512-cXEIW6cfr15lFv563k4GuVuW/fiwjknytD37jIOLSdSWuOI6WnO/oKwmP2FQTU2l01LP8/M5TSAJpzUaGe3uWg==
 
 varint@~5.0.0:
   version "5.0.2"
