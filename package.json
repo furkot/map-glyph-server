@@ -27,7 +27,7 @@
     "@furkot/glyph-pbf-composite": "^1.0.1",
     "connect": "~3",
     "debug": "~4",
-    "dotenv": "~10",
+    "dotenv": "~16",
     "router": "~1"
   },
   "devDependencies": {
