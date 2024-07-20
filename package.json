@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@pirxpilot/jshint": "^3.0.1",
-    "supertest": "~6"
+    "supertest": "~7"
   },
   "scripts": {
     "test": "make check"
