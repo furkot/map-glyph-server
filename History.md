@@ -1,4 +1,12 @@
 
+1.1.9 / 2024-07-19
+==================
+
+ * soft dependency update
+ * upgrade supertest to ~7
+ * upgrade dotenv to version ~16
+ * use @furkot/glyph-pbf-composite
+
 1.1.8 / 2024-01-12
 ==================
 
