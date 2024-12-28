@@ -2,7 +2,7 @@
 
 require('dotenv').config({ path: '/etc/default/map-glyph-server' });
 
-const connect = require('connect');
+const connect = require('@pirxpilot/connect');
 const router = require('./lib/map-glyph-server');
 
 const PORT = process.env.MAP_GLYPH_SERVER_PORT || 3060;
