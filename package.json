@@ -23,7 +23,6 @@
     "map-glyph-server": "index.js"
   },
   "dependencies": {
-    "@folder/readdir": "~3",
     "@furkot/glyph-pbf-composite": "~1",
     "@pirxpilot/connect": "~4",
     "debug": "~4",

@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-"@folder/readdir@~3":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@folder/readdir/-/readdir-3.1.0.tgz#f0c64b5d67669ba6f8374bb8d0dc376f36532b1e"
-  integrity sha512-mqkVdQ77BcCOWur/dxoPxjJS2eJg8Eqqx1Dgdc/qbTeGI5UMPDLmT0peGEjxLdlnD9SvhMnpJuiyaYl2btdT6A==
-
 "@furkot/glyph-pbf-composite@~1":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@furkot/glyph-pbf-composite/-/glyph-pbf-composite-1.0.2.tgz#9537b16c7406f914160f908c9300959b15d1ad7d"
