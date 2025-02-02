@@ -4,7 +4,7 @@ process.env.MAP_GLYPH_SERVER_CACHE_MAX_AGE = 2592000;
 const test = require('node:test');
 const assert = require('node:assert/strict');
 
-const request = require('supertest');
+const { makeFetch } = require('supertest-fetch');
 const app = require('..');
 
 /*
@@ -14,32 +14,31 @@ const app = require('..');
 74696 fixtures/Open Sans Regular/0-255.pbf
 */
 
-test('return /fonts.json', function () {
-  return request(app)
-    .get('/fonts.json')
-    .set('Accept', 'application/json')
+const fetch = makeFetch(app);
+
+test('return /fonts.json', async function () {
+  const res = await fetch('/fonts.json')
     .expect('Content-Type', /json/)
-    .expect(200)
-    .then(response =>
-      assert.deepEqual(response.body, [
-        'Metropolis Black',
-        'Open Sans Bold',
-        'Open Sans Regular'
-      ])
-    );
+    .expect(200);
+
+  const body = await res.json();
+
+  assert.deepEqual(body, [
+    'Metropolis Black',
+    'Open Sans Bold',
+    'Open Sans Regular'
+  ]);
 });
 
 test('return a specific font', function () {
-  return request(app)
-    .get('/fonts/Metropolis%20Black/0-255.pbf')
+  return fetch('/fonts/Metropolis%20Black/0-255.pbf')
     .expect('Content-Type', 'application/x-protobuf')
     .expect('Content-Length', '75651')
     .expect(200);
 });
 
 test('return a specific font again', function () {
-  return request(app)
-    .get('/fonts/Metropolis%20Black/0-255.pbf')
+  return fetch('/fonts/Metropolis%20Black/0-255.pbf')
     .expect('Content-Type', 'application/x-protobuf')
     .expect('Content-Length', '75651')
     .expect('Cache-Control', 'public, max-age=2592000')
@@ -47,16 +46,14 @@ test('return a specific font again', function () {
 });
 
 test('return a fallback font for invalid name', function () {
-  return request(app)
-    .get('/fonts/Open%20Sans%20XXXX/256-511.pbf')
+  return fetch('/fonts/Open%20Sans%20XXXX/256-511.pbf')
     .expect('Content-Type', 'application/x-protobuf')
     .expect('Content-Length', '45992')
     .expect(200);
 });
 
 test('combines fonts if needed', function () {
-  return request(app)
-    .get('/fonts/Metropolis%20Black,Open%20Sans%20Bold/0-255.pbf')
+  return fetch('/fonts/Metropolis%20Black,Open%20Sans%20Bold/0-255.pbf')
     .expect('Content-Type', 'application/x-protobuf')
     .expect(200);
 });
