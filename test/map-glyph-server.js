@@ -52,7 +52,8 @@ test('return a specific font again if no etag', function () {
 test('return a specific font again if etag does not match', function () {
   return fetch('/fonts/Metropolis%20Black/0-255.pbf', {
     headers: {
-      'If-None-Match': '"XXX"' // different etag
+      'If-None-Match': '"XXX"', // different etag
+      'Cache-Control': ''
     }
   })
     .expect('Content-Type', 'application/x-protobuf')
@@ -65,7 +66,8 @@ test('return a specific font again if etag does not match', function () {
 test('return not modified if etag matches', function () {
   return fetch('/fonts/Metropolis%20Black/0-255.pbf', {
     headers: {
-      'If-None-Match': '"12783-O+uYHa1nljeTWqe1xiWgzTqMMDk"'
+      'If-None-Match': '"12783-O+uYHa1nljeTWqe1xiWgzTqMMDk"',
+      'Cache-Control': ''
     }
   })
     .expect('Cache-Control', 'public, max-age=2592000')

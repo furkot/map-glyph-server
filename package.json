@@ -28,7 +28,8 @@
     "@pirxpilot/router": "~1",
     "debug": "~4",
     "dotenv": "~16",
-    "etag": "~1"
+    "etag": "~1",
+    "fresh": "~2"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
