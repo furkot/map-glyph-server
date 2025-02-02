@@ -1,4 +1,13 @@
 
+1.3.0 / 2025-02-02
+==================
+
+ * add `ETag` header
+ * add `Content-Length` header
+ * use `@pirxpilot/router` instead of router
+ * use `supertest-fetch` instead of `supertest`
+ * use biome linter
+
 1.2.0 / 2024-12-28
 ==================
 
