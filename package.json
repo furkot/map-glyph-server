@@ -30,7 +30,7 @@
     "router": "~2"
   },
   "devDependencies": {
-    "@pirxpilot/jshint": "~3",
+    "@biomejs/biome": "^1.9.4",
     "supertest": "~7"
   },
   "scripts": {
