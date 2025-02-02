@@ -3,6 +3,7 @@ process.env.MAP_GLYPH_SERVER_CACHE_MAX_AGE = 2592000;
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
+const { createServer } = require('node:http');
 
 const { makeFetch } = require('supertest-fetch');
 const app = require('..');
@@ -14,7 +15,7 @@ const app = require('..');
 74696 fixtures/Open Sans Regular/0-255.pbf
 */
 
-const fetch = makeFetch(app);
+const fetch = makeFetch(createServer(app));
 
 test('return /fonts.json', async function () {
   const res = await fetch('/fonts.json')
