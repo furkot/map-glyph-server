@@ -20,11 +20,13 @@ test('return /fonts.json', function () {
     .set('Accept', 'application/json')
     .expect('Content-Type', /json/)
     .expect(200)
-    .then(response => assert.deepEqual(response.body, [
-          'Metropolis Black',
-          'Open Sans Bold',
-          'Open Sans Regular'
-    ]));
+    .then(response =>
+      assert.deepEqual(response.body, [
+        'Metropolis Black',
+        'Open Sans Bold',
+        'Open Sans Regular'
+      ])
+    );
 });
 
 test('return a specific font', function () {
@@ -34,7 +36,6 @@ test('return a specific font', function () {
     .expect('Content-Length', '75651')
     .expect(200);
 });
-
 
 test('return a specific font again', function () {
   return request(app)
@@ -53,7 +54,7 @@ test('return a fallback font for invalid name', function () {
     .expect(200);
 });
 
-test('combines fonts if needed', function() {
+test('combines fonts if needed', function () {
   return request(app)
     .get('/fonts/Metropolis%20Black,Open%20Sans%20Bold/0-255.pbf')
     .expect('Content-Type', 'application/x-protobuf')
