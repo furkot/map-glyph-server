@@ -17,7 +17,6 @@ const app = connect();
 
 app.use(router(FONT_PATH));
 
-
 module.exports = app;
 
 if (!module.parent) {
