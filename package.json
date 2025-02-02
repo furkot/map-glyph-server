@@ -25,13 +25,14 @@
   "dependencies": {
     "@furkot/glyph-pbf-composite": "~1",
     "@pirxpilot/connect": "~4",
+    "@pirxpilot/router": "~1",
     "debug": "~4",
     "dotenv": "~16",
-    "router": "~2"
+    "etag": "~1"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "supertest": "~7"
+    "supertest-fetch": "~2"
   },
   "scripts": {
     "test": "make check"

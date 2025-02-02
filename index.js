@@ -15,7 +15,7 @@ if (!FONT_PATH) {
 
 const app = connect();
 
-app.use(router(FONT_PATH));
+app.use('/fonts', router(FONT_PATH));
 
 module.exports = app;
 
