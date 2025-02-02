@@ -35,15 +35,42 @@ test('return a specific font', function () {
   return fetch('/fonts/Metropolis%20Black/0-255.pbf')
     .expect('Content-Type', 'application/x-protobuf')
     .expect('Content-Length', '75651')
+    .expect('Cache-Control', 'public, max-age=2592000')
+    .expect('Etag', '"12783-O+uYHa1nljeTWqe1xiWgzTqMMDk"')
     .expect(200);
 });
 
-test('return a specific font again', function () {
+test('return a specific font again if no etag', function () {
   return fetch('/fonts/Metropolis%20Black/0-255.pbf')
     .expect('Content-Type', 'application/x-protobuf')
     .expect('Content-Length', '75651')
     .expect('Cache-Control', 'public, max-age=2592000')
+    .expect('Etag', '"12783-O+uYHa1nljeTWqe1xiWgzTqMMDk"')
     .expect(200);
+});
+
+test('return a specific font again if etag does not match', function () {
+  return fetch('/fonts/Metropolis%20Black/0-255.pbf', {
+    headers: {
+      'If-None-Match': '"XXX"' // different etag
+    }
+  })
+    .expect('Content-Type', 'application/x-protobuf')
+    .expect('Content-Length', '75651')
+    .expect('Cache-Control', 'public, max-age=2592000')
+    .expect('Etag', '"12783-O+uYHa1nljeTWqe1xiWgzTqMMDk"')
+    .expect(200);
+});
+
+test('return not modified if etag matches', function () {
+  return fetch('/fonts/Metropolis%20Black/0-255.pbf', {
+    headers: {
+      'If-None-Match': '"12783-O+uYHa1nljeTWqe1xiWgzTqMMDk"'
+    }
+  })
+    .expect('Cache-Control', 'public, max-age=2592000')
+    .expect('Etag', '"12783-O+uYHa1nljeTWqe1xiWgzTqMMDk"')
+    .expect(304);
 });
 
 test('return a fallback font for invalid name', function () {
